@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chess</title>
+<script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/e.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/chess.js"></script>
+<link type="text/css" rel="stylesheet" href="css/chess.css" />
+</head>
+
+<body>
+<div class="chess-background">
+	<div class="chess-out-border">
+		<div class="chess-box">
+			<ul class="ground black">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="l-c"></li>
+				<li class="r-c"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li></li>
+				<li class="r-c"></li>
+				<li class="l-c"></li>
+				<li></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				
+				<li><span class="l-b"></span><span class="r-t"></span></li>
+				<li><span class="l-t"></span><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span><span class="r-t"></span></li>
+				<li><span class="l-t"></span><span class="r-b"></span></li>
+				
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+			</ul>
+			<div class="river">
+			</div>
+			<ul class="ground red">
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				<li><span class="l-b"></span></li>
+				<li><span class="r-b"></span></li>
+				
+				<li><span class="l-t"></span><span class="r-b"></span></li>
+				<li><span class="l-b"></span><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span><span class="r-b"></span></li>
+				<li><span class="l-b"></span><span class="r-t"></span></li>
+				
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				<li></li>
+				<li class="l-c"></li>
+				<li class="r-c"></li>
+				<li></li>
+				<li><span class="r-t"></span></li>
+				<li><span class="l-t"></span></li>
+				
+				<li></li>
+				<li></li>
+				<li></li>
+				<li class="r-c"></li>
+				<li class="l-c"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="chess" id="chess">
+	</div>
+</div>
+
+<div class="toolbar">
+	<input type="button" class="start-game" onclick="Event.fire('start-game')" value="Start Game" />
+	<div class="play">
+		<input type="button" class="previous-step" onclick="Event.fire('previous-step')" value="Previous" />
+		<input type="button" id="play-record" class="play-record" onclick="Event.fire('play-record',this)" value="Play" />
+		<input type="button" class="next-step" onclick="Event.fire('next-step')" value="Next" />
+	</div>
+	<input type="button" class="show-record" onclick="Event.fire('show-record')" value="Show Record" />
+	<input type="button" class="roll-back" onclick="Event.fire('rollback')" value="Roll Back" />
+</div>
+
+</body>
+</html>

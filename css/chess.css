@@ -1,0 +1,280 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ddd;
+}
+
+.chess-background {
+	width: 420px;
+	height: 470px;
+	margin: 30px auto 0;
+	background-color: #ffc;
+	padding: 20px 30px;
+	position: relative;
+}
+
+.chess {
+	width: 450px;
+	height: 500px;
+	position: absolute;
+	z-index: 2;
+	top: 5px;
+	left: 15px;
+	overflow: hidden;
+}
+
+.chess-out-border {
+	padding: 5px;
+	border: 4px solid #c96;
+	width: 402px;
+	height: 452px;
+	position: relative;
+	z-index: 1;
+}
+
+.chess-box {
+	border: 1px solid #c96;
+	width: 400px;
+	height: 450px;
+}
+
+li {
+	list-style: none;
+}
+
+.ground {
+	clear:both;
+	height: 200px;
+	width: 400px;
+}
+
+.river {
+	height: 48px;
+	border: 1px solid #c96;
+}
+
+.ground li {
+	width: 48px;
+	height: 48px;
+	border: 1px solid #c96;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.l-c {
+	background: url(../images/cross_left.gif) no-repeat center center;
+}
+
+.r-c {
+	background: url(../images/cross_right.gif) no-repeat center center;
+}
+
+.ground li span {
+	position: absolute;
+	height: 5px;
+	width: 5px;
+	display: block;
+	overflow: hidden;
+	border-color: #c96;
+	border-style: solid;
+}
+
+span.r-b {
+	border-width: 0 1px 1px 0;
+	right: 1px;
+	bottom: 1px;
+}
+
+span.r-t {
+	border-width: 1px 1px 0 0;
+	right: 1px;
+	top: 1px;
+}
+
+span.l-b {
+	border-width: 0 0 1px 1px;
+	left: 1px;
+	bottom: 1px;
+}
+
+span.l-t {
+	border-width: 1px 0 0 1px;
+	top: 1px;
+	left: 1px;
+}
+
+.mygrave, .hisgrave {
+	position: absolute;
+	width: 100px;
+}
+
+.mygrave div, .hisgrave div {
+	width: 50px;
+	height: 50px;
+}
+
+.mygrave {
+	right: -100px;
+	bottom: 0;
+	height: 50px;
+}
+
+.hisgrave {
+	left: -100px;
+	top: 0;
+}
+
+.hisgrave div {
+	float: right;
+}
+
+.mygrave div {
+	float: left;
+}
+
+.chess div {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.chess div.active {
+	border: 1px solid red;
+	height: 48px;
+	width: 48px;
+}
+
+.chess div.suggest {
+	border: 1px dashed red;
+	height: 48px;
+	width: 48px;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.chess div.suggest-kill {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+.red-chariot {
+	background: url(../images/red_chariot.gif) no-repeat center center;
+}
+
+.red-emplacement {
+	background: url(../images/red_emplacement.gif) no-repeat center center;
+}
+
+.red-horse {
+	background: url(../images/red_horse.gif) no-repeat center center;
+}
+
+.red-kavass {
+	background: url(../images/red_kavass.gif) no-repeat center center;
+}
+
+.red-king {
+	background: url(../images/red_king.gif) no-repeat center center;
+}
+
+.red-minister {
+	background: url(../images/red_minister.gif) no-repeat center center;
+}
+
+.red-pawn {
+	background: url(../images/red_pawn.gif) no-repeat center center;
+}
+
+.black-chariot {
+	background: url(../images/black_chariot.gif) no-repeat center center;
+}
+
+.black-emplacement {
+	background: url(../images/black_emplacement.gif) no-repeat center center;
+}
+
+.black-horse {
+	background: url(../images/black_horse.gif) no-repeat center center;
+}
+
+.black-kavass {
+	background: url(../images/black_kavass.gif) no-repeat center center;
+}
+
+.black-king {
+	background: url(../images/black_king.gif) no-repeat center center;
+}
+
+.black-minister {
+	background: url(../images/black_minister.gif) no-repeat center center;
+}
+
+.black-pawn {
+	background: url(../images/black_pawn.gif) no-repeat center center;
+}
+
+/* toolbar */
+.toolbar {
+	height: 27px;
+	background: url(../images/toolbar_bg.gif) repeat-x;
+	bottom: 0;
+	padding-top: 7px;
+	width: 100%;
+	text-align: right;
+	position: relative;
+	margin-top: 20px;
+}
+
+.toolbar .start-game, .toolbar .roll-back {
+	position: absolute;
+	top: 7px;
+}
+
+.toolbar .start-game {
+	left: 50px;
+}
+
+.toolbar .roll-back {
+	right: 50px;
+}
+
+.toolbar .play {
+	width: 100px;
+	padding: 0 100px;
+	left: 50%;
+	margin-left: -150px;
+	position: absolute;
+	top: 7px;
+	text-align: center;
+}
+
+.toolbar .show-record {
+	margin-right: 140px;
+}
+
+.toolbar .previous-step,.toolbar .next-step {
+	width: 90px;
+	position: absolute;
+	top: 0;
+}
+
+.toolbar .previous-step {
+	left: 0;
+}
+
+.toolbar .next-step {
+	right: 0;
+}
+
+.toolbar .play-record {
+	width: 95px;
+}
